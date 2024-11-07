@@ -1,0 +1,57 @@
+Muhammet Bozkurt
+# Network Scanner with SSH Connection
+
+Bu proje, belirtilen bir ağda (örneğin, `172.29.0.0/16`) aktif IP adreslerini tarar ve bulunan IP adreslerine eş zamanlı olarak SSH bağlantıları açar. Proje, Python programlama dilinde Scapy ve Paramiko kütüphaneleri kullanılarak geliştirilmiştir.
+
+## İçindekiler
+
+- [Gereksinimler](#gereksinimler)
+- [Kurulum](#kurulum)
+- [Kullanım](#kullanım)
+- [Dosya Yapısı](#Dosya-yapısı)
+
+## Gereksinimler
+
+- Python 3.x
+- `pip` (Python paket yöneticisi)
+- `scapy` (Ağ tarama için)
+- `paramiko` (SSH bağlantıları için)
+
+## Kurulum
+
+1. **Python 3 ve pip'in yüklü olduğunu kontrol edin:**
+
+   Terminalde şu komutları çalıştırarak kontrol edin:
+   python3 --version
+   pip3 --version
+   Eğer yüklü değilse, Ubuntu üzerinde Python'u ve pip'i yüklemek için:
+ sudo apt update
+sudo apt install python3 python3-pip
+Gerekli kütüphaneleri yükleyin: Aşağıdaki komutları terminalde çalıştırarak gerekli kütüphaneleri yükleyin:
+
+pip3 install scapy paramiko
+Proje klasörünü oluşturun ve içerisine geçin:
+mkdir network_scanner
+cd network_scanner
+Python dosyalarını oluşturun: Aşağıdaki dosyaları belirtilen isimlerle oluşturun ve içeriğini yukarıda verilen kodlarla doldurun:
+
+network_scanning.py
+ssh_connection.py
+main_script.py
+
+##Kullanım
+Kullanıcı bilgilerini güncelleyin: main_script.py dosyasında username ve password değişkenlerine kendi SSH kullanıcı bilgilerinizi girin:
+
+username = "your_username"  # Kullanıcı adınızı buraya girin
+password = "your_password"  # Parolanızı buraya girin
+Projenin ana scriptini çalıştırın: Terminalde aşağıdaki komutu çalıştırarak ana scripti başlatın:
+sudo python3 main_script.py
+
+##Dosya Yapısı
+Proje klasörü şu şekilde yapılandırılmıştır:
+network_scanner/
+│
+├── network_scanning.py   # Ağ tarama fonksiyonları
+├── ssh_connection.py      # SSH bağlantı fonksiyonları
+└── main_script.py         # ANA KOD
+
